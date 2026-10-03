@@ -1,0 +1,1 @@
+{"name":"contract-obligation-assistant","version":"0.1.0","type":"commonjs","scripts":{"start":"node server.js","test":"node --test","seed:example":"node scripts/seed.js"},"optionalDependencies":{"pdf-parse":"1.1.1","mammoth":"1.8.0"},"engines":{"node":">=20"}}

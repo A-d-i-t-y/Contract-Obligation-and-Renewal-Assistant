@@ -1,0 +1,16 @@
+# One-click deploy: push to GitHub → Render "New Blueprint". Persistent disk keeps contracts across deploys.
+services:
+  - type: web
+    name: contract-obligation-assistant
+    runtime: docker
+    plan: starter
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DB_FILE
+        value: /data/db.json
+    disk:
+      name: contract-data
+      mountPath: /data
+      sizeGB: 1
