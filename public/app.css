@@ -35,3 +35,30 @@ textarea,input[type=text],input[type=email],input[type=password],select{width:10
 @media(max-width:900px){.app{grid-template-columns:1fr}nav.side{position:static;height:auto;flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--bd)}nav.side .sp,.logo span{display:none}.hero,.vals{grid-template-columns:1fr}.scene{height:220px}main{padding:16px}}
 @media(max-width:760px){table,tbody,tr,td{display:block}thead{display:none}tr{background:var(--card);border:1px solid var(--bd);border-radius:10px;margin-bottom:10px;padding:6px}td{border:0;padding:4px 8px}td::before{content:attr(data-l)": ";color:var(--mut);font-size:12px}td.w{max-width:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.stack{transform:rotateX(52deg) rotateZ(-32deg)}}
+
+
+
+
+/* ---- Mobile / touch fixes ---- */
+html,body{overflow-x:hidden;-webkit-text-size-adjust:100%}.app>div{min-width:0}.btn,.tabs a,nav.side a,summary{touch-action:manipulation}
+@media(hover:none){.tilt,.btn:hover,.rv{transform:none!important;box-shadow:none}}
+@media(max-width:900px){
+ .app{grid-template-columns:minmax(0,1fr);padding-bottom:68px}
+ nav.side{position:fixed;left:0;right:0;bottom:0;top:auto;height:62px;z-index:15;flex-direction:row;justify-content:space-around;gap:0;padding:4px 2px calc(4px + env(safe-area-inset-bottom));border:0;border-top:1px solid var(--bd);overflow-x:auto}
+ nav.side .logo{display:none}
+ nav.side a{flex-direction:column;gap:0;font-size:10.5px;padding:4px 8px;min-width:58px;justify-content:center;text-align:center;line-height:1.2}
+ nav.side a span[aria-hidden]{font-size:18px}
+ .top{padding:8px 12px;gap:8px}.top .ws,.top .sp{display:none}.top input{min-width:0;max-width:none}
+ details .card{right:12px!important;z-index:30}
+ main{padding:16px 14px}h1{font-size:20px}.hero{padding:16px 0;gap:8px}.hero h1{font-size:26px}
+ .scene{height:190px}.stack{transform:rotateX(52deg) rotateZ(-32deg) scale(.7)}
+ .flex.between{align-items:flex-start}.flex.between>.flex{width:100%}.flex.between>.flex .btn{flex:1 1 auto;text-align:center}
+ .btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center}.btn.sm{min-height:36px}
+ input,select,textarea{font-size:16px!important;min-height:44px}textarea{min-height:160px}
+ .tabs a{padding:12px 14px}.link{min-height:32px}
+ .panel{width:100vw;z-index:40;padding:16px}#modal:not(:empty){z-index:50;padding:0;align-items:end}
+ .dlg{width:100%;max-height:92vh;border-radius:16px 16px 0 0;padding:18px}
+ .rv .flex .btn{flex:1 1 45%}.kb{display:none}.meta{gap:8px 16px}
+ h1{overflow-wrap:anywhere}.vals{gap:10px}
+}
+@media(max-width:760px){td::before{font-weight:600}td{padding:3px 8px}tr{box-shadow:none}}
